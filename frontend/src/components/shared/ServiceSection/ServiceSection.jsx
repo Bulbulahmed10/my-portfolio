@@ -59,7 +59,7 @@ const Progress = ({ done, isVisible, skillName }) => {
 
   return (
     <div className="progress">
-      <div className="progress-done text-black " style={style}>
+      <div className="progress-done text-black font-carla" style={style}>
         {skillName} {done}%
       </div>
     </div>
@@ -73,74 +73,72 @@ const ServiceSection = () => {
     setIsVisible(isVisible);
   };
   return (
-    <div>
-      <div className="relative pl-16 mt-52">
-        <div className="absolute left-2">
-          <p className="font-carla uppercase tracking-[16px] text-sm rotate-90 relative origin-top-left">
-            services
-          </p>
-          <p className="absolute rotate-90 mt-[190px] -ml-[43px] bg-black w-16 h-[1px] "></p>
+    <div className="relative pl-16 mt-52">
+      <div className="absolute left-2">
+        <p className="font-carla uppercase tracking-[16px] text-sm rotate-90 relative origin-top-left">
+          services
+        </p>
+        <p className="absolute rotate-90 mt-[190px] -ml-[43px] bg-black w-16 h-[1px] "></p>
+      </div>
+      <div className="grid grid-cols-4">
+        <div>
+          <h2 className="font-carla text-[#000000cc] font-semibold">
+            01 - Frontend Development
+          </h2>
+          <ul className="list-disc mt-2">
+            {FrontendSkillData.map((skill) => (
+              <li key={skill.id} className="font-carla text-[#808080] ml-4">
+                {skill.name}
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="grid grid-cols-4">
-          <div>
-            <h2 className="font-carla text-[#000000cc] font-semibold">
-              01 - Frontend Development
-            </h2>
-            <ul className="list-disc mt-2">
-              {FrontendSkillData.map((skill) => (
-                <li key={skill.id} className="font-carla text-[#808080] ml-4">
-                  {skill.name}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className="font-carla text-[#000000cc] font-semibold">
-              02 - Backend Development
-            </h2>
-            <ul className="list-disc mt-2">
-              {BackendSkillData.map((skill) => (
-                <li key={skill.id} className="font-carla text-[#808080] ml-4">
-                  {skill.name}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className="font-carla text-[#000000cc] font-semibold">
-              03 - Tools
-            </h2>
-            <ul className="list-disc mt-2">
-              {ToolsSkillData.map((skill) => (
-                <li key={skill.id} className="font-carla text-[#808080] ml-4">
-                  {skill.name}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className="font-carla text-[#000000cc] font-semibold">
-              04 - Programming Language
-            </h2>
-            <ul className="list-disc mt-2">
-              <li className="font-carla text-[#808080] ml-4">JavaScript</li>
-              <li className="font-carla text-[#808080] ml-4">TypeScript</li>
-            </ul>
-          </div>
+        <div>
+          <h2 className="font-carla text-[#000000cc] font-semibold">
+            02 - Backend Development
+          </h2>
+          <ul className="list-disc mt-2">
+            {BackendSkillData.map((skill) => (
+              <li key={skill.id} className="font-carla text-[#808080] ml-4">
+                {skill.name}
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="flex gap-4 flex-wrap mt-4">
-          {skillPercentage.map((singleSkillPercentage) => (
-            <div key={singleSkillPercentage.id}>
-              <VisibilitySensor onChange={onVisibilityChange}>
-                <Progress
-                  skillName={singleSkillPercentage.name}
-                  done={singleSkillPercentage.done}
-                  isVisible={isVisible}
-                />
-              </VisibilitySensor>
-            </div>
-          ))}
+        <div>
+          <h2 className="font-carla text-[#000000cc] font-semibold">
+            03 - Tools
+          </h2>
+          <ul className="list-disc mt-2">
+            {ToolsSkillData.map((skill) => (
+              <li key={skill.id} className="font-carla text-[#808080] ml-4">
+                {skill.name}
+              </li>
+            ))}
+          </ul>
         </div>
+        <div>
+          <h2 className="font-carla text-[#000000cc] font-semibold">
+            04 - Programming Language
+          </h2>
+          <ul className="list-disc mt-2">
+            <li className="font-carla text-[#808080] ml-4">JavaScript</li>
+            <li className="font-carla text-[#808080] ml-4">TypeScript</li>
+          </ul>
+        </div>
+      </div>
+      <div className="flex gap-4 flex-wrap mt-4">
+        {skillPercentage.map((singleSkillPercentage) => (
+          <div key={singleSkillPercentage.id}>
+            <VisibilitySensor onChange={onVisibilityChange}>
+              <Progress
+                skillName={singleSkillPercentage.name}
+                done={singleSkillPercentage.done}
+                isVisible={isVisible}
+              />
+            </VisibilitySensor>
+          </div>
+        ))}
       </div>
     </div>
   );

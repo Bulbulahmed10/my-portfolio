@@ -1,6 +1,7 @@
 import AboutSection from "../../components/shared/AboutSection/AboutSection";
 import SectionHeading from "../../components/shared/SectionHeading/SectionHeading";
 import ServiceSection from "../../components/shared/ServiceSection/ServiceSection";
+import WorkSection from "../../components/shared/WorkSection/WorkSection";
 
 const Home = () => {
   return (
@@ -21,6 +22,16 @@ const Home = () => {
         />
         <div className="z-10 relative mt-6">
           <ServiceSection />
+        </div>
+      </div>
+      <div className="my-60">
+        <SectionHeading
+          mainTitle="Works"
+          subTitle="Done projects"
+          headingDescription="here are some of my Best Projects"
+        />
+        <div className="z-10 relative mt-6">
+          <WorkSection />
         </div>
       </div>
     </div>
