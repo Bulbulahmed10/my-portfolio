@@ -24,13 +24,22 @@ const AboutSection = () => {
           modules={[EffectFade, Navigation, Pagination, Autoplay]}
           className="mySwiper">
           <SwiperSlide>
-            <img className="w-[500px] h-[600px] object-cover" src={MyImg1} />
+            <img
+              className="w-[500px] h-[600px] object-cover rounded-md"
+              src={MyImg1}
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-[500px] h-[600px] object-cover" src={MyImg2} />
+            <img
+              className="w-[500px] h-[600px] object-cover rounded-md"
+              src={MyImg2}
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-[500px] h-[600px] object-cover" src={MyImg3} />
+            <img
+              className="w-[500px] h-[600px] object-cover rounded-md"
+              src={MyImg3}
+            />
           </SwiperSlide>
         </Swiper>
       </div>

@@ -80,6 +80,14 @@ const WorkSection = () => {
           </div>
         ))}
       </div>
+
+      <p className="text-center font-carla text-xl">
+        <Link
+          className="bg-yellow-400 px-4 py-2 rounded-md font-semibold hover:bg-yellow-500 duration-200"
+          to="/projects">
+          See More Projects
+        </Link>
+      </p>
     </div>
   );
 };
