@@ -36,17 +36,6 @@ const Home = () => {
           <WorkSection />
         </div>
       </div>
-      <div className="mt-60">
-        <SectionHeading
-          mainTitle="Contact"
-          subTitle="Contact Me"
-          headingDescription="Feel free to contact me"
-        />
-        <div className="z-10 relative mt-6">
-          <Contact />
-        </div>
-      </div>
-      <Footer />
     </div>
   );
 };

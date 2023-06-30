@@ -1,6 +1,6 @@
 import React from "react";
 import { LiaBarsSolid } from "react-icons/lia";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <header className="relative flex justify-between py-4 px-20 z-50">
@@ -10,11 +10,15 @@ const Header = () => {
         </h1>
       </Link>
       <div>
-        <Link
+        <NavLink
           to="/projects"
-          className="font-carla font-bold tracking-wide text-lg hover:text-yellow-700 ">
+          className={({ isActive }) =>
+            isActive
+              ? "font-carla font-bold tracking-wide text-lg text-yellow-700"
+              : "font-carla font-bold tracking-wide text-lg hover:text-yellow-700"
+          }>
           Projects
-        </Link>
+        </NavLink>
       </div>
     </header>
   );
