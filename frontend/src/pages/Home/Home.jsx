@@ -1,5 +1,6 @@
 import AboutSection from "../../components/shared/AboutSection/AboutSection";
 import Contact from "../../components/shared/Contact/Contact";
+import Footer from "../../components/shared/Footer/Footer";
 import SectionHeading from "../../components/shared/SectionHeading/SectionHeading";
 import ServiceSection from "../../components/shared/ServiceSection/ServiceSection";
 import WorkSection from "../../components/shared/WorkSection/WorkSection";
@@ -35,7 +36,7 @@ const Home = () => {
           <WorkSection />
         </div>
       </div>
-      <div className="my-60">
+      <div className="mt-60">
         <SectionHeading
           mainTitle="Contact"
           subTitle="Contact Me"
@@ -45,6 +46,7 @@ const Home = () => {
           <Contact />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
