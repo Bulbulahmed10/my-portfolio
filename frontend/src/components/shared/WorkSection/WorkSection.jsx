@@ -36,16 +36,17 @@ const bestProjectsData = [
 
 const WorkSection = () => {
   return (
-    <div className="relative pl-16 mt-52">
-      <div className="absolute left-2">
+    <div className="relative md:pl-8 mt-24 md:mt-52">
+      <div className="absolute hidden md:block left-2">
         <p className="font-carla uppercase tracking-[16px] text-sm rotate-90 relative origin-top-left">
           projects
         </p>
-        <p className="absolute rotate-90 mt-[190px] -ml-[43px] bg-black w-16 h-[1px] "></p>
+        <p className="absolute hidden md:block rotate-90 mt-[190px] -ml-[43px] bg-black w-16 h-[1px] "></p>
       </div>
       <div>
         {bestProjectsData.map((singleProject) => (
           <div
+            data-aos="fade-up"
             key={singleProject.id}
             className="bg-gray-200 p-1 relative group mb-8">
             <img
@@ -53,25 +54,25 @@ const WorkSection = () => {
               src={singleProject.websiteImage}
               alt=""
             />
-            <div className="w-60 h-32 z-20 bg-white absolute top-[50%] left-[40%] group-hover:scale-110 transform transition-transform duration-300 rounded-md">
+            <div className="w-full md:w-52 lg:w-60 h-24 md:h-32 z-20 md:bg-white  absolute top-[50%] md:left-[35%] lg:left-[40%] group-hover:scale-110 transform transition-transform duration-300 rounded-md">
               <div className="flex flex-col items-center justify-center mt-4">
-                <p className="text-2xl font-semibold font-playFair">
+                <p className="hidden md:block md:text-xl lg:text-2xl font-semibold font-playFair">
                   {singleProject.projectName}
                 </p>
                 <div className="flex gap-4 mt-4">
                   <Link
                     to={singleProject.githubLink}
                     target="_blank"
-                    className="bg-yellow-500 p-2 rounded-full"
+                    className="bg-yellow-500 p-1 md:p-2 rounded-full"
                     title="GitHub Repository">
-                    <BsGithub className="text-xl" />
+                    <BsGithub className="md:text-xl" />
                   </Link>
                   <Link
                     to={singleProject.liveSiteLink}
                     target="_blank"
-                    className="bg-yellow-500 p-2 rounded-full"
+                    className="bg-yellow-500 p-1 md:p-2 rounded-full"
                     title="Live Website">
-                    <CgWebsite className="text-xl" />
+                    <CgWebsite className="md:text-xl" />
                   </Link>
                 </div>
               </div>
@@ -81,7 +82,7 @@ const WorkSection = () => {
         ))}
       </div>
 
-      <p className="text-center font-carla text-xl">
+      <p className="text-center font-carla md:text-xl">
         <Link
           className="bg-yellow-400 px-4 py-2 rounded-md font-semibold hover:bg-yellow-500 duration-200"
           to="/projects">

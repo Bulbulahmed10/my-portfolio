@@ -6,12 +6,12 @@ import SectionHeading from "../components/shared/SectionHeading/SectionHeading";
 
 const Main = () => {
   return (
-    <div className=" max-w-7xl mx-auto ">
+    <div className="w-full max-w-7xl mx-auto px-4 overflow-x-hidden ">
       <Header />
       <div>
         <Outlet />
       </div>
-      <div className="mt-60">
+      <div className="md:px-10">
         <SectionHeading
           mainTitle="Contact"
           subTitle="Contact Me"

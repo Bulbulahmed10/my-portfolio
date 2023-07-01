@@ -73,61 +73,87 @@ const ServiceSection = () => {
     setIsVisible(isVisible);
   };
   return (
-    <div className="relative pl-16 mt-52">
+    <div className="relative md:pl-16 mt-24 md:mt-52">
       <div className="absolute left-2">
         <p className="font-carla uppercase tracking-[16px] text-sm rotate-90 relative origin-top-left">
           services
         </p>
         <p className="absolute rotate-90 mt-[190px] -ml-[43px] bg-black w-16 h-[1px] "></p>
       </div>
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-4 md:gap-y-0 pl-8 md:pl-0">
         <div>
-          <h2 className="font-carla text-[#000000cc] font-semibold">
+          <h2
+            data-aos="zoom-in-right"
+            className="font-carla text-[#000000cc] font-semibold">
             01 - Frontend Development
           </h2>
           <ul className="list-disc mt-2">
             {FrontendSkillData.map((skill) => (
-              <li key={skill.id} className="font-carla text-[#808080] ml-4">
+              <li
+                data-aos="zoom-in-right"
+                key={skill.id}
+                className="font-carla text-[#808080] ml-4">
                 {skill.name}
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h2 className="font-carla text-[#000000cc] font-semibold">
+          <h2
+            data-aos="zoom-in-right"
+            className="font-carla text-[#000000cc] font-semibold">
             02 - Backend Development
           </h2>
           <ul className="list-disc mt-2">
             {BackendSkillData.map((skill) => (
-              <li key={skill.id} className="font-carla text-[#808080] ml-4">
+              <li
+                data-aos="zoom-in-right"
+                key={skill.id}
+                className="font-carla text-[#808080] ml-4">
                 {skill.name}
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h2 className="font-carla text-[#000000cc] font-semibold">
+          <h2
+            data-aos="zoom-in-right"
+            className="font-carla text-[#000000cc] font-semibold">
             03 - Tools
           </h2>
           <ul className="list-disc mt-2">
             {ToolsSkillData.map((skill) => (
-              <li key={skill.id} className="font-carla text-[#808080] ml-4">
+              <li
+                data-aos="zoom-in-right"
+                key={skill.id}
+                className="font-carla text-[#808080] ml-4">
                 {skill.name}
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h2 className="font-carla text-[#000000cc] font-semibold">
+          <h2
+            data-aos="zoom-in-right"
+            className="font-carla text-[#000000cc] font-semibold">
             04 - Programming Language
           </h2>
           <ul className="list-disc mt-2">
-            <li className="font-carla text-[#808080] ml-4">JavaScript</li>
-            <li className="font-carla text-[#808080] ml-4">TypeScript</li>
+            <li
+              data-aos="zoom-in-right"
+              className="font-carla text-[#808080] ml-4">
+              JavaScript
+            </li>
+            <li
+              data-aos="zoom-in-right"
+              className="font-carla text-[#808080] ml-4">
+              TypeScript
+            </li>
           </ul>
         </div>
       </div>
-      <div className="flex gap-4 flex-wrap mt-4">
+
+      <div className="flex gap-4 gap-y-0 flex-wrap mt-4">
         {skillPercentage.map((singleSkillPercentage) => (
           <div key={singleSkillPercentage.id}>
             <VisibilitySensor onChange={onVisibilityChange}>
